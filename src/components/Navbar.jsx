@@ -11,7 +11,7 @@ const Navbar = () => {
     const navLinks = [
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },
-        { name: "Portfolio", path: "/portfolio" },
+        { name: "Services", path: "/ourservice" },
         { name: "Contact", path: "/contact" },
     ];
 
@@ -71,7 +71,11 @@ const Navbar = () => {
                             <span
                                 className={`text-2xl font-bold ${getLogoColor()} transition-colors duration-300`}
                             >
-                                PartnersHub.co
+                                <img
+                                    src="/images/logophi.png"
+                                    alt="Logo"
+                                    className="h-20 w-50 mr-2"
+                                />
                             </span>
                         </Link>
                     </div>
@@ -93,9 +97,12 @@ const Navbar = () => {
                             </div>
                         ))}
 
-                        <button className="ml-6 px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors">
+                        <a
+                            href="#about"
+                            className="ml-6 px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors"
+                        >
                             Get Started
-                        </button>
+                        </a>
                     </div>
 
                     {/* Mobile menu button */}
@@ -124,9 +131,12 @@ const Navbar = () => {
                                 {link.name}
                             </Link>
                         ))}
-                        <button className="w-full mt-4 px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors">
+                        <a
+                            href="#about"
+                            className="w-full mt-4 px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors"
+                        >
                             Get Started
-                        </button>
+                        </a>
                     </div>
                 </div>
             )}

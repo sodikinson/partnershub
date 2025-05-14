@@ -65,7 +65,7 @@ const Customer = () => {
                     <div className="relative">
                         <div className="absolute -top-4 -left-4 w-72 h-72 bg-blue-100 rounded-lg -z-10"></div>
                         <img
-                            src="/src/assets/Customer.jpg"
+                            src="/images/Customer.jpg"
                             alt="About us"
                             className="rounded-lg shadow-2xl w-full object-cover h-[500px]"
                         />

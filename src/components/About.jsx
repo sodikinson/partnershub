@@ -1,5 +1,6 @@
 import React from "react";
 import { Check, ArrowUpRight } from "lucide-react";
+import about from "../assets/About.jpg"; // Assuming you have an image in the assets folder
 
 const About = () => {
     const achievements = [
@@ -29,7 +30,10 @@ const About = () => {
     ];
 
     return (
-        <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <section
+            id="about"
+            className="py-24 bg-gradient-to-b from-gray-50 to-white"
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-20">
@@ -53,7 +57,7 @@ const About = () => {
                     <div className="relative">
                         <div className="absolute -top-4 -left-4 w-72 h-72 bg-blue-100 rounded-lg -z-10"></div>
                         <img
-                            src="/src/assets/About.jpg"
+                            src="/images/About.jpg"
                             alt="About us"
                             className="rounded-lg shadow-2xl w-full object-cover h-[500px]"
                         />

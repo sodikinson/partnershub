@@ -12,7 +12,7 @@ const Team = () => {
         {
             name: "John Doe",
             position: "CEO & Co-Founder",
-            image: "/src/assets/Team.jpg",
+            image: "/images/retail.jpg",
             bio: "Visionary leader with 15+ years of experience in tech innovation",
             expertise: ["Retail", "Creative Company"],
             color: "blue",
@@ -26,7 +26,7 @@ const Team = () => {
         {
             name: "Jane Smith",
             position: "CTO & Tech Lead",
-            image: "/src/assets/Team.jpg",
+            image: "/images/edu.jpg",
             bio: "Tech enthusiast driving cutting-edge solutions in software development",
             expertise: ["Educational", "Financial", "Information Technology"],
             color: "purple",
@@ -40,7 +40,7 @@ const Team = () => {
         {
             name: "Mike Johnson",
             position: "Lead Designer",
-            image: "/src/assets/Team.jpg",
+            image: "/images/farm.jpg",
             bio: "Creative mind behind our award-winning user experience designs",
             expertise: ["Agriculture", "Aquaculture"],
             color: "pink",
@@ -54,9 +54,9 @@ const Team = () => {
         {
             name: "John Doe",
             position: "CEO & Co-Founder",
-            image: "/src/assets/Team.jpg",
+            image: "/images/factory.jpg",
             bio: "Visionary leader with 15+ years of experience in tech innovation",
-            expertise: ["Infrastructure", "MAnufacturing"],
+            expertise: ["Infrastructure", "Manufacturing"],
             color: "blue",
             social: {
                 linkedin: "https://linkedin.com/in/johndoe",
@@ -68,7 +68,7 @@ const Team = () => {
         {
             name: "Jane Smith",
             position: "CTO & Tech Lead",
-            image: "/src/assets/Team.jpg",
+            image: "/images/mining.jpg",
             bio: "Tech enthusiast driving cutting-edge solutions in software development",
             expertise: ["Mining", "Energy"],
             color: "purple",
@@ -82,7 +82,7 @@ const Team = () => {
         {
             name: "Mike Johnson",
             position: "Lead Designer",
-            image: "/src/assets/Team.jpg",
+            image: "/images/food.jpg",
             bio: "Creative mind behind our award-winning user experience designs",
             expertise: ["Food", "Beverage"],
             color: "pink",
@@ -96,7 +96,7 @@ const Team = () => {
         {
             name: "Jane Smith",
             position: "CTO & Tech Lead",
-            image: "/src/assets/Team.jpg",
+            image: "/images/caroseri.jpg",
             bio: "Tech enthusiast driving cutting-edge solutions in software development",
             expertise: ["Caroseri"],
             color: "purple",
@@ -110,7 +110,7 @@ const Team = () => {
         {
             name: "Mike Johnson",
             position: "Lead Designer",
-            image: "/src/assets/Team.jpg",
+            image: "/images/export.jpg",
             bio: "Creative mind behind our award-winning user experience designs",
             expertise: ["Export", "Import"],
             color: "pink",

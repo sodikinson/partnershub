@@ -14,6 +14,8 @@ import Testimonials from "./components/Testimonials";
 import Stats from "./components/Stats";
 // import Blog from "./components/Blog";
 import Customer from "./components/Customer";
+import OurServices from "./components/OurService";
+import WhatsAppButton from "./components/WhatsAppButton";
 import "./styles/animations.css";
 
 const App = () => {
@@ -24,8 +26,8 @@ const App = () => {
                     <SEO
                         title="Partners Hub - Business Solutions"
                         description="We provide innovative solutions for your business needs including Business Permit, Legal Service, Tax and Accounting, Business Advisory and Strategy, HR Management, Merger and Acquisition, and Feasibility Study."
-                        keywords="web development, mobile apps, UI/UX design, digital marketing"
-                        image="/og-image.jpg"
+                        keywords="Business Permit, Legal Service, Tax and Accounting, Business Advisory and Strategy, HR Management, Merger and Acquisition, and Feasibility Study"
+                        image="/images/thumbnailphi.png"
                     />
                     <Navbar />
                     <Routes>
@@ -36,6 +38,7 @@ const App = () => {
                         <Route path="/team" element={<Team />} />
                         <Route path="/contact" element={<Contact />} />
                     </Routes>
+                    <WhatsAppButton />
                     <Footer />
                 </div>
             </Router>
@@ -48,6 +51,7 @@ const Home = () => {
         <>
             <Hero />
             <About />
+            <OurServices />
             <Services />
             <Stats />
             <Portfolio />

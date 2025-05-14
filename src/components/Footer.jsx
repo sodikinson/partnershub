@@ -4,7 +4,7 @@ import {
     Phone,
     MapPin,
     Facebook,
-    Twitter,
+    TypeOutline,
     Instagram,
     Linkedin,
     ArrowUpRight,
@@ -12,11 +12,10 @@ import {
 
 const Footer = () => {
     const quickLinks = [
-        { name: "Home", href: "#" },
-        { name: "About", href: "#" },
-        { name: "Services", href: "#" },
-        { name: "Portfolio", href: "#" },
-        { name: "Contact", href: "#" },
+        { name: "Home", href: "#navbar" },
+        { name: "About", href: "#about" },
+        { name: "Services", href: "#ourservices" },
+        { name: "Contact", href: "#contact" },
     ];
 
     const services = [
@@ -47,14 +46,26 @@ const Footer = () => {
     ];
 
     const socialLinks = [
-        { icon: <Facebook className="w-5 h-5" />, href: "#", name: "Facebook" },
-        { icon: <Twitter className="w-5 h-5" />, href: "#", name: "Twitter" },
+        {
+            icon: <Facebook className="w-5 h-5" />,
+            href: "https://www.facebook.com/share/1Gi7XXKLAm/?mibextid=wwXIfr",
+            name: "Facebook",
+        },
+        {
+            icon: <TypeOutline className="w-5 h-5" />,
+            href: "https://www.tiktok.com/@partnershub.ind?_t=ZS-8wCTdSJq42i&_r=1",
+            name: "TikTok",
+        },
         {
             icon: <Instagram className="w-5 h-5" />,
-            href: "#",
+            href: "https://www.instagram.com/partnershub.co?igsh=Njh4dnV4eGF6Ymdh",
             name: "Instagram",
         },
-        { icon: <Linkedin className="w-5 h-5" />, href: "#", name: "LinkedIn" },
+        {
+            icon: <Linkedin className="w-5 h-5" />,
+            href: " https://www.linkedin.com/partnershubindonesia?_l=in_ID",
+            name: "LinkedIn",
+        },
     ];
 
     return (
@@ -97,8 +108,8 @@ const Footer = () => {
                     {/* Company Info */}
                     <div className="space-y-6">
                         <img
-                            className="h-8 w-auto"
-                            src="/src/assets/logo-white.png"
+                            className="h-13 w-auto"
+                            src="/images/phifooter.png"
                             alt="PHI Logo"
                         />
                         <p className="text-gray-400 leading-relaxed">
@@ -193,9 +204,15 @@ const Footer = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-gray-400 text-sm">
-                            © {new Date().getFullYear()} Your Company. All
-                            rights reserved.
+                            © {new Date().getFullYear()} Partners Hub Indonesia.
+                            All rights reserved.
                         </p>
+                        <a
+                            href="https://wa.link/qs34ov"
+                            className="text-indigo-700 cursor-grab text-sm"
+                        >
+                            Published by jiuheng.tech
+                        </a>
                         <div className="flex gap-6">
                             <a
                                 href="#"

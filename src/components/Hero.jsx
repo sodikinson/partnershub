@@ -46,13 +46,19 @@ const Hero = () => {
 
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="group inline-flex items-center justify-center px-6 py-3 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-600 transition-all duration-200 transform hover:scale-105">
+                            <a
+                                href="#about"
+                                className="group inline-flex items-center justify-center px-6 py-3 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-600 transition-all duration-200 transform hover:scale-105"
+                            >
                                 Get Started
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </button>
-                            <button className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white/10 text-white font-semibold hover:bg-white/20 backdrop-blur-sm transition-all">
-                                Learn More
-                            </button>
+                            </a>
+                            <a
+                                href="contact"
+                                className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white/10 text-white font-semibold hover:bg-white/20 backdrop-blur-sm transition-all"
+                            >
+                                Contact
+                            </a>
                         </div>
                     </div>
 
