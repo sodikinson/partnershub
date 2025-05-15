@@ -19,12 +19,12 @@ const Footer = () => {
     ];
 
     const services = [
-        { name: "Business Permit & Legal Service", href: "#" },
-        { name: "Tax & Accounting", href: "#" },
-        { name: "Business Advisory & Strategy", href: "#" },
-        { name: "HR Management", href: "#" },
-        { name: "Merger & Acquisition", href: "#" },
-        { name: "Feasibility Study", href: "#" },
+        { name: "Business Permit & Legal Service", href: "ourservices" },
+        { name: "Tax & Accounting", href: "ourservices" },
+        { name: "Business Advisory & Strategy", href: "ourservices" },
+        { name: "HR Management", href: "ourservices" },
+        { name: "Merger & Acquisition", href: "ourservices" },
+        { name: "Feasibility Study", href: "ourservices" },
     ];
 
     const contactInfo = [
@@ -61,15 +61,15 @@ const Footer = () => {
             href: "https://www.instagram.com/partnershub.co?igsh=Njh4dnV4eGF6Ymdh",
             name: "Instagram",
         },
-        {
-            icon: <Linkedin className="w-5 h-5" />,
-            href: " https://www.linkedin.com/partnershubindonesia?_l=in_ID",
-            name: "LinkedIn",
-        },
+        // {
+        //     icon: <Linkedin className="w-5 h-5" />,
+        //     href: " https://www.linkedin.com/partnershubindonesia?_l=in_ID",
+        //     name: "LinkedIn",
+        // },
     ];
 
     return (
-        <footer className="bg-gray-900">
+        <footer id="footer" className="bg-gray-900">
             {/* Newsletter Section */}
             {/* <div className="border-b border-gray-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -209,9 +209,9 @@ const Footer = () => {
                         </p>
                         <a
                             href="https://wa.link/qs34ov"
-                            className="text-indigo-700 cursor-grab text-sm"
+                            className="text-indigo-900 cursor-grab text-sm"
                         >
-                            Published by jiuheng.tech
+                            Published by 6realm.tech
                         </a>
                         <div className="flex gap-6">
                             <a

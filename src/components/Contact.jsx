@@ -29,7 +29,11 @@ const Contact = () => {
                         <h3 className="text-2xl font-bold text-gray-900 mb-8">
                             Send us a message
                         </h3>
-                        <form className="flex flex-col flex-grow justify-between">
+                        <form
+                            method="POST"
+                            action="https://formspree.io/f/mvgadyby" // Replace with your Formspree form ID
+                            className="flex flex-col flex-grow justify-between"
+                        >
                             <div className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
@@ -38,8 +42,10 @@ const Contact = () => {
                                         </label>
                                         <input
                                             type="text"
+                                            name="firstName"
                                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                                             placeholder="John"
+                                            required
                                         />
                                     </div>
                                     <div>
@@ -48,8 +54,10 @@ const Contact = () => {
                                         </label>
                                         <input
                                             type="text"
+                                            name="lastName"
                                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                                             placeholder="Doe"
+                                            required
                                         />
                                     </div>
                                 </div>
@@ -60,8 +68,10 @@ const Contact = () => {
                                     </label>
                                     <input
                                         type="email"
+                                        name="email"
                                         className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                                         placeholder="john@example.com"
+                                        required
                                     />
                                 </div>
 
@@ -70,9 +80,11 @@ const Contact = () => {
                                         Message
                                     </label>
                                     <textarea
+                                        name="message"
                                         rows="10"
                                         className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all resize-none"
                                         placeholder="Tell us about your project..."
+                                        required
                                     ></textarea>
                                 </div>
                             </div>
@@ -129,8 +141,8 @@ const Contact = () => {
                                     <span className="text-gray-600">
                                         Saturday
                                     </span>
-                                    <span className="font-medium">
-                                        10:00 AM - 4:00 PM
+                                    <span className="text-blue-600 font-medium">
+                                        Closed
                                     </span>
                                 </div>
                                 <div className="flex justify-between items-center">

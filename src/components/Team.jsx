@@ -152,10 +152,10 @@ const Team = () => {
                             Clients
                         </span>
                     </h2>
-                    {/* <p className="max-w-2xl mx-auto text-lg text-gray-600">
+                    <p className="max-w-2xl mx-auto text-lg text-gray-600">
                         Our team of experts brings together decades of
                         experience to deliver exceptional results
-                    </p> */}
+                    </p>
                 </div>
 
                 {/* Team Grid */}
@@ -178,8 +178,8 @@ const Team = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                                 {/* Hover Social Links */}
-                                {/* <div className="absolute bottom-4 left-4 right-4 flex justify-center space-x-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                                    <a
+                                <div className="absolute bottom-4 left-4 right-4 flex justify-center space-x-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                    {/* <a
                                         href={member.social.linkedin}
                                         className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300"
                                         target="_blank"
@@ -208,8 +208,8 @@ const Team = () => {
                                         rel="noopener noreferrer"
                                     >
                                         <GlobeIcon className="w-5 h-5" />
-                                    </a>
-                                </div> */}
+                                    </a> */}
+                                </div>
                             </div>
 
                             {/* Content */}

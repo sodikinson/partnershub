@@ -8,6 +8,7 @@ import {
     FileText,
     ChartSpline,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const OurServices = () => {
     const services = [
@@ -17,6 +18,7 @@ const OurServices = () => {
                 "Business registration & licensing, Compliance with local regulations, Legal documentation & corporate governance",
             icon: Rabbit,
             color: "blue",
+            slug: "business-permit-legal-services",
         },
         {
             title: "Tax & Accounting",
@@ -24,6 +26,7 @@ const OurServices = () => {
                 "Tax Planning, tax compliance, reporting, Tax Lawyer, Financial Statement, Auditing",
             icon: Expand,
             color: "purple",
+            slug: "tax-accounting",
         },
         {
             title: "Business advisory & Strategy",
@@ -31,13 +34,15 @@ const OurServices = () => {
                 "Business Process Optimization, Market enrty Strategy, Corporate Restructuring",
             icon: DollarSign,
             color: "pink",
+            slug: "business-advisory-strategy",
         },
         {
-            title: "HR Management",
+            title: "HR Services",
             description:
                 "Policies, Compliance, Recruitment, Talent Acquisition, Payroll, and Employee benefits",
             icon: Users,
             color: "orange",
+            slug: "hr-services",
         },
         {
             title: "Mergers & Acquisitions",
@@ -45,6 +50,7 @@ const OurServices = () => {
                 "Due diligence, valuation,Negotiation, Deal Structuring, Post-merger integration",
             icon: BellDot,
             color: "cyan",
+            slug: "mergers-acquisitions",
         },
         {
             title: "Feasibility Study",
@@ -52,6 +58,7 @@ const OurServices = () => {
                 "Market analysis, Research, Final projections, Risk assessment",
             icon: FileText,
             color: "green",
+            slug: "feasibility-study",
         },
         {
             title: "Adaptability",
@@ -59,6 +66,7 @@ const OurServices = () => {
                 "Seamless integration of third-party services and APIs",
             icon: ChartSpline,
             color: "yellow",
+            slug: "adaptability",
         },
     ];
 
@@ -87,34 +95,24 @@ const OurServices = () => {
                             Services
                         </span>
                     </h2>
-                    {/* <p className="max-w-2xl mx-auto text-lg text-gray-600">
+                    <p className="max-w-2xl mx-auto text-lg text-gray-600">
                         Partnering With Us
-                    </p> */}
+                    </p>
                 </div>
 
                 {/* Services Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 cursor-grab gap-8">
                     {services.map((service, index) => {
                         const Icon = service.icon;
                         return (
-                            <div
+                            <Link
                                 key={index}
-                                className="group relative bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                                to={`/service/${service.slug}`}
+                                className="group hover:bg-indigo-100 relative bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden block"
+                                style={{ textDecoration: "none" }}
                             >
                                 {/* Background Pattern */}
                                 <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-5 transition-opacity duration-300 pattern-grid-lg" />
-
-                                {/* Icon */}
-                                {/* <div className={`mb-6 relative`}>
-                                    <div
-                                        className={`w-14 h-14 rounded-lg bg-gradient-to-r ${getGradient(
-                                            service.color
-                                        )} flex items-center justify-center`}
-                                    >
-                                        <Icon className="w-7 h-7 text-white" />
-                                    </div>
-                                </div> */}
-
                                 {/* Content */}
                                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                                     {service.title}
@@ -122,7 +120,7 @@ const OurServices = () => {
                                 <p className="text-gray-600 leading-relaxed">
                                     {service.description}
                                 </p>
-                            </div>
+                            </Link>
                         );
                     })}
                 </div>

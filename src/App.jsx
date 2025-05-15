@@ -16,6 +16,7 @@ import Stats from "./components/Stats";
 import Customer from "./components/Customer";
 import OurServices from "./components/OurService";
 import WhatsAppButton from "./components/WhatsAppButton";
+import ServicePage from "./components/ServicePage";
 import "./styles/animations.css";
 
 const App = () => {
@@ -33,10 +34,14 @@ const App = () => {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
-                        <Route path="/services" element={<Services />} />
+                        <Route path="/ourservices" element={<OurServices />} />
                         <Route path="/portfolio" element={<Portfolio />} />
                         <Route path="/team" element={<Team />} />
                         <Route path="/contact" element={<Contact />} />
+                        <Route
+                            path="/service/:slug"
+                            element={<ServicePage />}
+                        />
                     </Routes>
                     <WhatsAppButton />
                     <Footer />
