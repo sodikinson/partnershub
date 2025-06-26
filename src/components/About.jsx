@@ -4,10 +4,10 @@ import about from "../assets/About.jpg"; // Assuming you have an image in the as
 
 const About = () => {
     const achievements = [
-        { number: "5+", label: "Years Experience" },
+        { number: "8+", label: "Years Experience" },
         { number: "Solid", label: "Team Members" },
         { number: "98%", label: "Client Satisfaction" },
-        { number: "90+", label: "Projects Completed" },
+        { number: "1000+", label: "Projects Completed" },
     ];
 
     const values = [

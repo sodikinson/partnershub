@@ -22,7 +22,7 @@ const Footer = () => {
         { name: "Business Permit & Legal Service", href: "ourservices" },
         { name: "Tax & Accounting", href: "ourservices" },
         { name: "Business Advisory & Strategy", href: "ourservices" },
-        { name: "HR Management", href: "ourservices" },
+        { name: "HR Services", href: "ourservices" },
         { name: "Merger & Acquisition", href: "ourservices" },
         { name: "Feasibility Study", href: "ourservices" },
     ];
@@ -30,7 +30,7 @@ const Footer = () => {
     const contactInfo = [
         {
             icon: <Phone className="w-5 h-5" />,
-            text: "+62 812-1335-4221",
+            text: "+62 878-7379-5212",
             href: "tel:+6281213354221",
         },
         {

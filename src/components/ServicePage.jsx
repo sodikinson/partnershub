@@ -9,6 +9,8 @@ import {
     ChartSpline,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const services = [
     {
@@ -106,6 +108,12 @@ const getGradient = (color) => {
 };
 
 const ServicePage = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     return (
         <>
             {/* Hero Section */}
@@ -210,7 +218,7 @@ const ServicePage = () => {
                         how we can help your business thrive in Indonesia.
                     </p>
                     <a
-                        href="https://wa.me/628111840070"
+                        href="https://wa.me/+6287873795212"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg shadow-lg hover:bg-blue-50 transition-colors text-lg"
