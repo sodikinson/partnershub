@@ -1,8 +1,7 @@
 import React from "react";
 import { Check, ArrowUpRight } from "lucide-react";
-import about from "../assets/About.jpg"; // Assuming you have an image in the assets folder
 
-const About = () => {
+const LegalService = () => {
     const achievements = [
         { number: "5+", label: "Years Experience" },
         { number: "Solid", label: "Team Members" },
@@ -12,43 +11,52 @@ const About = () => {
 
     const values = [
         {
-            title: "Credible",
+            title: "Looking to be registered as a legal entity (LLC or Corporation)",
             description: "Proven insight Backed by Experience",
         },
         {
-            title: "Professional",
+            title: "Actively involved in business operations",
             description: "Strategic guidance with Integrity",
         },
         {
-            title: "Accessible",
+            title: "Ranges from small to large-scale businesses",
             description: "Clear Solutions, Always within Reach",
         },
         {
-            title: "Relatable",
+            title: "Can be in any industry",
+            description: "We Understand your Business Challanges",
+        },
+        {
+            title: "May have multiple locations",
+            description: "Strategic guidance with Integrity",
+        },
+        {
+            title: "Financially stable with a track record of revenue growth",
+            description: "Clear Solutions, Always within Reach",
+        },
+        {
+            title: "Requires legal services for various needs and seeks high-quality, valuable legal assistance from a reliable partner",
             description: "We Understand your Business Challanges",
         },
     ];
 
     return (
-        <section
-            id="about"
-            className="py-24 bg-gradient-to-b from-gray-50 to-white"
-        >
+        <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Partners Hub Indonesia{" "}
+                        Legal{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                            Company Overview
+                            Service
                         </span>
                     </h2>
-                    <p className="max-w-2xl mx-auto text-lg text-gray-600">
+                    {/* <p className="max-w-2xl mx-auto text-lg text-gray-600">
                         Empowering businesses to reach their full potential with
                         personalized, professional support. Our mission is to
                         build long-lasting partnerships driven by shared success
                         and excellence.
-                    </p>
+                    </p> */}
                 </div>
 
                 {/* Main Content */}
@@ -57,12 +65,12 @@ const About = () => {
                     <div className="relative">
                         <div className="absolute -top-4 -left-4 w-72 h-72 bg-blue-100 rounded-lg -z-10"></div>
                         <img
-                            src="/images/About.jpg"
+                            src="/images/Legal.jpg"
                             alt="About us"
-                            className="rounded-lg shadow-2xl w-full object-fill h-full"
+                            className="rounded-lg shadow-2xl w-full object-cover h-[500px]"
                         />
                         {/* Achievement Stats */}
-                        <div className="grid grid-cols-2 gap-4 absolute -right-8 -bottom-8 bg-white p-6 rounded-lg shadow-xl max-w-sm">
+                        {/* <div className="grid grid-cols-2 gap-4 absolute -right-8 -bottom-8 bg-white p-6 rounded-lg shadow-xl max-w-sm">
                             {achievements.map((achievement, index) => (
                                 <div key={index} className="text-center">
                                     <div className="text-2xl font-bold text-blue-600">
@@ -73,12 +81,12 @@ const About = () => {
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Right Column - Content */}
                     <div className="space-y-8">
-                        <div>
+                        {/* <div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">
                                 Introductory Note
                             </h3>
@@ -86,16 +94,16 @@ const About = () => {
                                 Partnershub Indonesia is a trusted business
                                 consulting firm specializing in business
                                 permits, legal services, tax and accounting,
-                                advisory, HR Services, mergers & acquisitions,
+                                advisory, HR management, mergers & acquisitions,
                                 and feasibility studies. We provide
                                 comprehensive solutions to help businesses
                                 navigate regulatory requirements, optimize
                                 operations, and achieve sustainable growth.
                             </p>
-                        </div>
+                        </div> */}
 
                         {/* Mission & Vision Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="p-6 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                                 <h4 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
                                     Mission
@@ -117,10 +125,10 @@ const About = () => {
                                     clients.
                                 </p>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Company Values */}
-                        <div className="space-y-4">
+                        {/* <div className="space-y-4">
                             {values.map((value, index) => (
                                 <div key={index} className="flex items-start">
                                     <div className="flex-shrink-0">
@@ -136,7 +144,7 @@ const About = () => {
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -144,4 +152,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default LegalService;

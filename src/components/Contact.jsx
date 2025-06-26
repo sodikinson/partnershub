@@ -114,9 +114,13 @@ const Contact = () => {
                                 Our Location
                             </h3>
                             <p className="text-gray-600">
-                                Located in the heart of the business district,
-                                our office is easily accessible by public
-                                transport and has ample parking space.
+                                PT.KOLEGA BISNIS INDONESIA <br />
+                                Treasury Tower LT 16 Unit I, District 8 SCBD Lot
+                                28, <br />
+                                Jl. Jend. Sudirman Kav 52-53, Senayan, Kebayoran
+                                Baru, <br />
+                                Jakarta Selatan. DKI Jakarta 12190 <br />
+                                Telp : 021-50300844 - WA : +62 878-7379-5212
                             </p>
                         </div>
 

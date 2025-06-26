@@ -67,20 +67,20 @@ const Hero = () => {
                         {[
                             {
                                 title: "Clients",
-                                value: "200+",
+                                value: "500+",
                                 desc: "Diverse Industries",
                             },
                             {
                                 title: "Projects",
-                                value: "200+",
+                                value: "1000+",
                                 desc: "Completed",
                             },
                             {
                                 title: "Experience",
-                                value: "5+",
+                                value: "8+",
                                 desc: "Years",
                             },
-                            { title: "Goals", value: "50+", desc: "Achieved" },
+                            { title: "Goals", value: "500+", desc: "Achieved" },
                         ].map((stat, index) => (
                             <div
                                 key={index}

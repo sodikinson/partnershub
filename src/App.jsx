@@ -18,6 +18,7 @@ import OurServices from "./components/OurService";
 import WhatsAppButton from "./components/WhatsAppButton";
 import ServicePage from "./components/ServicePage";
 import "./styles/animations.css";
+import LegalService from "./components/LegalService";
 
 const App = () => {
     return (
@@ -57,7 +58,9 @@ const Home = () => {
             <Hero />
             <About />
             <OurServices />
+            <LegalService />
             <Services />
+
             <Stats />
             <Portfolio />
             <Customer />
