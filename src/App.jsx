@@ -64,7 +64,7 @@ const Home = () => {
             <Stats />
             <Portfolio />
             <Customer />
-            <Testimonials />
+            {/* <Testimonials /> */}
             {/* <Blog /> */}
             <Team />
 

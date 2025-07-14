@@ -31,7 +31,7 @@ const Contact = () => {
                         </h3>
                         <form
                             method="POST"
-                            action="https://formspree.io/f/mvgadyby" // Replace with your Formspree form ID
+                            action="https://formspree.io/f/xyzpgvlw" // Replace with your Formspree form ID
                             className="flex flex-col flex-grow justify-between"
                         >
                             <div className="space-y-6">

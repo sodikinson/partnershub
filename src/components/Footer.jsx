@@ -35,8 +35,8 @@ const Footer = () => {
         },
         {
             icon: <Mail className="w-5 h-5" />,
-            text: "kolegabisnisidn@gmail.com",
-            href: "mailto:kolegabisnisidn@gmail.com",
+            text: "info@partnershub.co",
+            href: "mailto:info@partnershub.co",
         },
         {
             icon: <MapPin className="w-5 h-5" />,
