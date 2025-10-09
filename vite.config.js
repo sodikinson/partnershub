@@ -47,16 +47,7 @@ export default defineConfig(({ mode }) => {
         },
       },
     ],
-    server: {
-      proxy: {
-        // Dev-only proxy to avoid CORS when posting to Apps Script
-        '/survey-proxy': {
-          target,
-          changeOrigin: true,
-          secure: true,
-          rewrite: (path) => path.replace(/^\/survey-proxy/, ''),
-        },
-      },
-    },
+    // Remove Vite built-in proxy for /survey-proxy to avoid conflicts
+    // Our custom middleware above handles POST forwarding and redirects.
   }
 })

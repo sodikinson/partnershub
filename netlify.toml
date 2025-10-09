@@ -1,0 +1,2 @@
+[build.environment]
+  VITE_SURVEY_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx.../exec"
