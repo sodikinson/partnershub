@@ -25,7 +25,7 @@ const Contact = () => {
                 {/* Contact Form dan Location Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* Form dengan spacing yang disesuaikan */}
-                    <div className="bg-white p-8 rounded-2xl shadow-lg h-[700px] flex flex-col">
+                    <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col h-auto md:min-h-[600px] lg:min-h-[700px]">
                         <h3 className="text-2xl font-bold text-gray-900 mb-8">
                             Send us a message
                         </h3>
@@ -102,9 +102,9 @@ const Contact = () => {
                     </div>
 
                     {/* Location Card */}
-                    <div className="bg-white p-8 rounded-2xl shadow-lg h-[700px] flex flex-col">
+                    <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col h-auto md:min-h-[600px] lg:min-h-[700px]">
                         <div className="flex-grow">
-                            <div className="aspect-video w-full bg-gray-100 rounded-lg mb-6">
+                            <div className="w-full bg-gray-100 rounded-lg mb-6 aspect-[4/3] sm:aspect-video">
                                 {/* Placeholder for map */}
                                 <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center">
                                     <MapPin className="w-12 h-12 text-gray-400" />

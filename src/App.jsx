@@ -19,6 +19,8 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import ServicePage from "./components/ServicePage";
 import "./styles/animations.css";
 import LegalService from "./components/LegalService";
+import Event from "./components/Event";
+import Survey from "./components/Survey";
 
 const App = () => {
     return (
@@ -39,6 +41,8 @@ const App = () => {
                         <Route path="/portfolio" element={<Portfolio />} />
                         <Route path="/team" element={<Team />} />
                         <Route path="/contact" element={<Contact />} />
+                        <Route path="/event" element={<Event />} />
+                        <Route path="/survey" element={<Survey />} />
                         <Route
                             path="/service/:slug"
                             element={<ServicePage />}
