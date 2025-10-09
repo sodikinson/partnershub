@@ -31,6 +31,7 @@ const Survey = () => {
         phone: "",
     });
     const [status, setStatus] = useState({ loading: false, success: false, error: null });
+    const [showSuccessModal, setShowSuccessModal] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -100,6 +101,7 @@ const Survey = () => {
             }
 
             setStatus({ loading: false, success: true, error: null });
+            setShowSuccessModal(true);
             setFormData({
                 name: "",
                 businessName: "",
@@ -118,6 +120,7 @@ const Survey = () => {
             });
         } catch (err) {
             setStatus({ loading: false, success: false, error: err.message || "Unknown error" });
+            setShowSuccessModal(false);
         }
     };
 
@@ -141,11 +144,7 @@ const Survey = () => {
                     </div>
                 </div>
 
-                {status.success && (
-                    <div className="mb-6 p-4 bg-green-50 border border-green-200 text-green-700 rounded-lg">
-                        Thank you! Your response has been recorded.
-                    </div>
-                )}
+                {/* Success is now shown via modal popup */}
                 {status.error && (
                     <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-700 rounded-lg">
                         Submission failed: {status.error}
@@ -446,6 +445,28 @@ const Survey = () => {
                     </form>
                 </div>
             </div>
+            {showSuccessModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+                    <div className="bg-white rounded-2xl shadow-xl max-w-lg w-full mx-4 p-6">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Thank you for completing the survey! 🙏</h3>
+                        <p className="text-gray-700 text-sm leading-relaxed text-center">
+                            Our team will contact you shortly to explain more about the PHI x TOMAZZ event: “Becoming Investment-Ready Business,” including registration details with a special price of IDR 2.5 million.
+                        </p>
+                        <div className="mt-6 flex justify-center">
+                            <button
+                                onClick={() => {
+                                    setShowSuccessModal(false)
+                                    setStatus((prev) => ({ ...prev, success: false }))
+                                }}
+                                className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                                aria-label="Close success message"
+                            >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </section>
     );
 };
