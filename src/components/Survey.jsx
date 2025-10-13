@@ -127,6 +127,15 @@ const Survey = () => {
     return (
         <section id="#survey" className="py-24 bg-gradient-to-b from-gray-50 to-white">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Responsive banner between Navbar and form title */}
+                <div className="mb-10">
+                    <img
+                        src={import.meta.env.VITE_SURVEY_BANNER_URL || "/images/seminar-banner.jpg"}
+                        alt="PHI x TOMAZZ Seminar Banner"
+                        loading="lazy"
+                        className="w-full h-auto rounded-xl shadow-lg object-cover"
+                    />
+                </div>
                 <div className="text-center mb-10">
                     <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
                         Business Expansion & Investment Survey
@@ -139,7 +148,7 @@ const Survey = () => {
                             Through the collaboration between Partners Hub Indonesia (PHI) and TOMAZZ, we are opening opportunities for businesses that want to grow, find the right investors, or are ready to expand their operations.
                         </p>
                         <p>
-                            Fill out this short survey (less than 2 minutes), and our team will help guide you towards the best steps for you. Ill add the survey questions later.
+                            Fill out this short survey (less than 2 minutes), and our team will help guide you towards the best steps for you.
                         </p>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { X } from "lucide-react";
 import { HelmetProvider } from "react-helmet-async";
 import Navbar from "./components/Navbar";
 import SEO from "./components/SEO";
@@ -57,8 +58,43 @@ const App = () => {
 };
 
 const Home = () => {
+    const [showBanner, setShowBanner] = useState(true);
     return (
         <>
+            {showBanner && (
+                <div
+                    className="fixed inset-0 z-50 bg-black/40 p-4 flex items-end justify-start"
+                    onClick={() => setShowBanner(false)}
+                >
+                    <div
+                        className="relative bg-white rounded-2xl shadow-2xl w-[92vw] sm:w-auto max-w-sm overflow-hidden"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            onClick={() => setShowBanner(false)}
+                            className="absolute top-3 right-3 z-10 inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-gray-800 border border-gray-200 shadow hover:bg-gray-50"
+                            aria-label="Close banner"
+                        >
+                            <X className="w-5 h-5" />
+                        </button>
+                        <img
+                            src="/images/popup-banner.jpg"
+                            alt="PHI x TOMAZZ Seminar"
+                            className="w-full h-auto object-cover"
+                            loading="lazy"
+                        />
+                        <div className="p-3 sm:p-4 flex justify-center">
+                            <Link
+                                to="/survey"
+                                onClick={() => setShowBanner(false)}
+                                className="px-6 py-3 sm:px-8 sm:py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                            >
+                                Take Survey
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            )}
             <Hero />
             <About />
             <OurServices />
