@@ -1,2 +1,4 @@
 [build.environment]
-  VITE_SURVEY_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx.../exec"
+  VITE_SURVEY_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyk_dABcmrj6-UYFwGV7gRl-nKRqp1MJBoCMlAinsSNl-kDgkC-v6a8HEAy8oiDNvxgUQ/exec"
+
+/* /index.html 200
