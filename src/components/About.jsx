@@ -83,7 +83,7 @@ const About = () => {
                                 Introductory Note
                             </h3>
                             <p className="text-gray-600 leading-relaxed mb-6">
-                                Partnershub Indonesia is a trusted business
+                                Operating under the legal name PT. KOLEGA BISNIS INDONESIA, we are proudly branded as Partners Hub Indonesia. is a trusted business
                                 consulting firm specializing in business
                                 permits, legal services, tax and accounting,
                                 advisory, HR Services, mergers & acquisitions,
