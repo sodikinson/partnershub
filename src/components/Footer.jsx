@@ -204,14 +204,14 @@ const Footer = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-gray-400 text-sm">
-                            © {new Date().getFullYear()} Partners Hub Indonesia.
+                            © {new Date().getFullYear()} PT. KOLEGA BISNIS INDONESIA.
                             All rights reserved.
                         </p>
                         <a
                             href="https://wa.link/qs34ov"
                             className="text-indigo-900 cursor-grab text-sm"
                         >
-                            Published by 6realm.tech
+                            Published by PHI
                         </a>
                         <div className="flex gap-6">
                             <a
