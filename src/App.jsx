@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import { X } from "lucide-react";
 import { HelmetProvider } from "react-helmet-async";
 import Navbar from "./components/Navbar";
@@ -22,38 +22,58 @@ import "./styles/animations.css";
 import LegalService from "./components/LegalService";
 import Event from "./components/Event";
 import Survey from "./components/Survey";
+import { trackPageView, trackSurveyStart } from "./utils/metaPixel";
 
 const App = () => {
     return (
         <HelmetProvider>
             <Router>
-                <div className="min-h-screen bg-gray-50">
-                    <SEO
-                        title="Partners Hub - Business Solutions"
-                        description="We provide innovative solutions for your business needs including Business Permit, Legal Service, Tax and Accounting, Business Advisory and Strategy, HR Management, Merger and Acquisition, and Feasibility Study."
-                        keywords="Business Permit, Legal Service, Tax and Accounting, Business Advisory and Strategy, HR Management, Merger and Acquisition, and Feasibility Study"
-                        image="/images/thumbnailphi.png"
-                    />
-                    <Navbar />
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/ourservices" element={<OurServices />} />
-                        <Route path="/portfolio" element={<Portfolio />} />
-                        <Route path="/team" element={<Team />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/event" element={<Event />} />
-                        <Route path="/survey" element={<Survey />} />
-                        <Route
-                            path="/service/:slug"
-                            element={<ServicePage />}
-                        />
-                    </Routes>
-                    <WhatsAppButton />
-                    <Footer />
-                </div>
+                <AppContent />
             </Router>
         </HelmetProvider>
+    );
+};
+
+// Component to handle route tracking
+const AppContent = () => {
+    const location = useLocation();
+
+    // Track page views on route changes
+    useEffect(() => {
+        // Small delay to ensure the page has loaded
+        const timer = setTimeout(() => {
+            trackPageView();
+        }, 100);
+
+        return () => clearTimeout(timer);
+    }, [location.pathname]);
+
+    return (
+        <div className="min-h-screen bg-gray-50">
+            <SEO
+                title="Partners Hub - Business Solutions"
+                description="We provide innovative solutions for your business needs including Business Permit, Legal Service, Tax and Accounting, Business Advisory and Strategy, HR Management, Merger and Acquisition, and Feasibility Study."
+                keywords="Business Permit, Legal Service, Tax and Accounting, Business Advisory and Strategy, HR Management, Merger and Acquisition, and Feasibility Study"
+                image="/images/thumbnailphi.png"
+            />
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/ourservices" element={<OurServices />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/event" element={<Event />} />
+                <Route path="/survey" element={<Survey />} />
+                <Route
+                    path="/service/:slug"
+                    element={<ServicePage />}
+                />
+            </Routes>
+            <WhatsAppButton />
+            <Footer />
+        </div>
     );
 };
 
@@ -86,7 +106,10 @@ const Home = () => {
                         <div className="p-3 sm:p-4 flex justify-center">
                             <Link
                                 to="/survey"
-                                onClick={() => setShowBanner(false)}
+                                onClick={() => {
+                                    setShowBanner(false);
+                                    trackSurveyStart();
+                                }}
                                 className="px-6 py-3 sm:px-8 sm:py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
                             >
                                 Take Survey

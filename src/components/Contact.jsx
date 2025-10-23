@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, MapPin, Clock, Send } from "lucide-react";
+import { trackContactFormSubmit } from "../utils/metaPixel";
 
 const Contact = () => {
     return (
@@ -32,6 +33,7 @@ const Contact = () => {
                         <form
                             method="POST"
                             action="https://formspree.io/f/xyzpgvlw" // Replace with your Formspree form ID
+                            onSubmit={() => trackContactFormSubmit()}
                             className="flex flex-col flex-grow justify-between"
                         >
                             <div className="space-y-6">

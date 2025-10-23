@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Send, Mail, Phone, Building2, User } from "lucide-react";
+import { trackSurveyComplete } from "../utils/metaPixel";
 
 const Survey = () => {
     const [formData, setFormData] = useState({
@@ -102,6 +103,15 @@ const Survey = () => {
 
             setStatus({ loading: false, success: true, error: null });
             setShowSuccessModal(true);
+            
+            // Track survey completion with Meta Pixel
+            trackSurveyComplete({
+                industry: formData.industry,
+                legalEntity: formData.legalEntity,
+                focus: formData.focus,
+                interest: formData.interest
+            });
+            
             setFormData({
                 name: "",
                 businessName: "",
@@ -459,7 +469,7 @@ const Survey = () => {
                     <div className="bg-white rounded-2xl shadow-xl max-w-lg w-full mx-4 p-6">
                         <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Thank you for completing the survey! 🙏</h3>
                         <p className="text-gray-700 text-sm leading-relaxed text-center">
-                            Our team will contact you shortly to explain more about the PHI x TOMAZZ event: “Becoming Investment-Ready Business,” including registration details with a special price of IDR 2.5 million.
+                            Our team will contact you shortly to explain more about the PHI x TOMAZZ event: “Becoming Investment-Ready Business,” including registration details with a special price of IDR 1.5 million.
                         </p>
                         <div className="mt-6 flex justify-center">
                             <button

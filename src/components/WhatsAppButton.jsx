@@ -1,5 +1,6 @@
 // filepath: /Users/arirudiana/Devs/partnershub/src/components/WhatsAppButton.jsx
 import React from "react";
+import { trackWhatsAppClick } from "../utils/metaPixel";
 
 const WhatsAppButton = () => {
     const phoneNumber = "+6287873795212"; // Replace with your WhatsApp number
@@ -9,11 +10,16 @@ const WhatsAppButton = () => {
         message
     )}`;
 
+    const handleWhatsAppClick = () => {
+        trackWhatsAppClick();
+    };
+
     return (
         <a
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleWhatsAppClick}
             className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all"
             aria-label="Chat on WhatsApp"
         >
