@@ -1,6 +1,7 @@
 // filepath: /Users/arirudiana/Devs/partnershub/src/components/WhatsAppButton.jsx
 import React from "react";
 import { trackWhatsAppClick } from "../utils/metaPixel";
+import { trackContactInteraction } from "../utils/googleAnalytics";
 
 const WhatsAppButton = () => {
     const phoneNumber = "+6287873795212"; // Replace with your WhatsApp number
@@ -12,6 +13,7 @@ const WhatsAppButton = () => {
 
     const handleWhatsAppClick = () => {
         trackWhatsAppClick();
+        trackContactInteraction('whatsapp', { phone_number: phoneNumber });
     };
 
     return (

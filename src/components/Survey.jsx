@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Send, Mail, Phone, Building2, User } from "lucide-react";
 import { trackSurveyComplete } from "../utils/metaPixel";
+import { trackSurveyInteraction } from "../utils/googleAnalytics";
 
 const Survey = () => {
     const [formData, setFormData] = useState({
@@ -108,6 +109,14 @@ const Survey = () => {
             trackSurveyComplete({
                 industry: formData.industry,
                 legalEntity: formData.legalEntity,
+                focus: formData.focus,
+                interest: formData.interest
+            });
+            
+            // Track survey completion with Google Analytics
+            trackSurveyInteraction('complete', {
+                industry: formData.industry,
+                legal_entity: formData.legalEntity,
                 focus: formData.focus,
                 interest: formData.interest
             });

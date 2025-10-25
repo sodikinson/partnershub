@@ -23,6 +23,7 @@ import LegalService from "./components/LegalService";
 import Event from "./components/Event";
 import Survey from "./components/Survey";
 import { trackPageView, trackSurveyStart } from "./utils/metaPixel";
+import { trackPageView as trackGAPageView, trackSurveyInteraction } from "./utils/googleAnalytics";
 
 const App = () => {
     return (
@@ -43,6 +44,8 @@ const AppContent = () => {
         // Small delay to ensure the page has loaded
         const timer = setTimeout(() => {
             trackPageView();
+            // Also track with Google Analytics
+            trackGAPageView(document.title, location.pathname);
         }, 100);
 
         return () => clearTimeout(timer);
@@ -109,6 +112,7 @@ const Home = () => {
                                 onClick={() => {
                                     setShowBanner(false);
                                     trackSurveyStart();
+                                    trackSurveyInteraction('start', { source: 'popup_banner' });
                                 }}
                                 className="px-6 py-3 sm:px-8 sm:py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
                             >
