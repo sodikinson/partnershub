@@ -6,6 +6,7 @@ import {
     MailIcon,
     GlobeIcon,
 } from "lucide-react";
+import LazyImage from "./LazyImage";
 
 const Team = () => {
     const team = [
@@ -170,9 +171,12 @@ const Team = () => {
 
                             {/* Member Image Container */}
                             <div className="relative h-80 overflow-hidden">
-                                <img
+                                <LazyImage
                                     src={member.image}
                                     alt={member.name}
+                                    width={300}
+                                    height={320}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

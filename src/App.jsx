@@ -23,7 +23,8 @@ import LegalService from "./components/LegalService";
 import Event from "./components/Event";
 import Survey from "./components/Survey";
 import { trackPageView, trackSurveyStart } from "./utils/metaPixel";
-import { trackPageView as trackGAPageView, trackSurveyInteraction } from "./utils/googleAnalytics";
+import { trackSurveyInteraction } from "./utils/googleAnalytics";
+import { generateHomepageSchema } from './utils/structuredData';
 
 const App = () => {
     return (
@@ -54,10 +55,11 @@ const AppContent = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             <SEO
-                title="Partners Hub - Business Solutions"
-                description="We provide innovative solutions for your business needs including Business Permit, Legal Service, Tax and Accounting, Business Advisory and Strategy, HR Management, Merger and Acquisition, and Feasibility Study."
-                keywords="Business Permit, Legal Service, Tax and Accounting, Business Advisory and Strategy, HR Management, Merger and Acquisition, and Feasibility Study"
+                title="Partners Hub Indonesia - Professional Business Solutions"
+                description="Your trusted partner for business permits, legal services, tax & accounting, business advisory, HR management, M&A, and feasibility studies in Indonesia. Expert solutions for market entry and business growth."
+                keywords="business permits Indonesia, legal services Jakarta, tax accounting Indonesia, business advisory, HR management, M&A Indonesia, feasibility studies, company incorporation Indonesia, business licensing, regulatory compliance"
                 image="/images/thumbnailphi.png"
+                structuredData={generateHomepageSchema()}
             />
             <Navbar />
             <Routes>

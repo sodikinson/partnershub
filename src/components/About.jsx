@@ -1,6 +1,7 @@
 import React from "react";
 import { Check, ArrowUpRight } from "lucide-react";
 import about from "../assets/About.jpg"; // Assuming you have an image in the assets folder
+import LazyImage from "./LazyImage";
 
 const About = () => {
     const achievements = [
@@ -56,9 +57,12 @@ const About = () => {
                     {/* Left Column - Image */}
                     <div className="relative">
                         <div className="absolute -top-4 -left-4 w-72 h-72 bg-blue-100 rounded-lg -z-10"></div>
-                        <img
+                        <LazyImage
                             src="/images/About.jpg"
                             alt="About us"
+                            width={600}
+                            height={400}
+                            sizes="(max-width: 768px) 100vw, 50vw"
                             className="rounded-lg shadow-2xl w-full object-fill h-full"
                         />
                         {/* Achievement Stats */}
