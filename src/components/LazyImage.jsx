@@ -8,24 +8,26 @@ const LazyImage = ({
   height, 
   sizes = "100vw",
   priority = false,
-  placeholder = "/placeholder.jpg",
+  placeholder = "/placeholder.svg",
   webpSrc = null,
   avifSrc = null
 }) => {
   const [imageSrc, setImageSrc] = useState(priority ? src : placeholder);
   const [imageRef, setImageRef] = useState();
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(priority);
   const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
 
   // Generate WebP and AVIF sources if not provided
   const generateOptimizedSrc = (originalSrc, format) => {
     if (!originalSrc) return null;
-    const extension = originalSrc.split('.').pop();
-    return originalSrc.replace(`.${extension}`, `.${format}`);
+    // Only generate optimized sources if explicitly requested
+    // Don't auto-generate to avoid 404 errors
+    return null;
   };
 
-  const webpSource = webpSrc || generateOptimizedSrc(src, 'webp');
-  const avifSource = avifSrc || generateOptimizedSrc(src, 'avif');
+  const webpSource = webpSrc; // Only use if explicitly provided
+  const avifSource = avifSrc; // Only use if explicitly provided
 
   useEffect(() => {
     let observer;
@@ -33,15 +35,17 @@ const LazyImage = ({
 
     if (priority) {
       setImageSrc(src);
+      setIsInView(true);
       return;
     }
 
-    if (imageRef && imageSrc === placeholder) {
+    if (imageRef && !isInView) {
       if (IntersectionObserver) {
         observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
               if (!didCancel && entry.isIntersecting) {
+                setIsInView(true);
                 setImageSrc(src);
                 observer.unobserve(imageRef);
               }
@@ -51,6 +55,7 @@ const LazyImage = ({
         );
         observer.observe(imageRef);
       } else {
+        setIsInView(true);
         setImageSrc(src);
       }
     }
@@ -61,7 +66,7 @@ const LazyImage = ({
         observer.unobserve(imageRef);
       }
     };
-  }, [src, imageSrc, imageRef, priority, placeholder]);
+  }, [src, imageRef, priority, isInView]);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -69,7 +74,8 @@ const LazyImage = ({
 
   const handleError = () => {
     setHasError(true);
-    setImageSrc(placeholder);
+    // Don't set back to placeholder to avoid blinking
+    // Keep the current src and let CSS handle the error state
   };
 
   // If modern formats are available, use picture element
@@ -92,9 +98,16 @@ const LazyImage = ({
           decoding="async"
           onLoad={handleLoad}
           onError={handleError}
-          className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+          className={`${className} ${
+            imageSrc === placeholder 
+              ? 'opacity-60' 
+              : isLoaded 
+                ? 'opacity-100' 
+                : 'opacity-0'
+          } transition-opacity duration-500 ease-in-out`}
           style={{
             aspectRatio: width && height ? `${width}/${height}` : undefined,
+            backgroundColor: imageSrc === placeholder ? '#f3f4f6' : 'transparent',
           }}
         />
       </picture>
@@ -113,9 +126,16 @@ const LazyImage = ({
       decoding="async"
       onLoad={handleLoad}
       onError={handleError}
-      className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+      className={`${className} ${
+        imageSrc === placeholder 
+          ? 'opacity-60' 
+          : isLoaded 
+            ? 'opacity-100' 
+            : 'opacity-0'
+      } transition-opacity duration-500 ease-in-out`}
       style={{
         aspectRatio: width && height ? `${width}/${height}` : undefined,
+        backgroundColor: imageSrc === placeholder ? '#f3f4f6' : 'transparent',
       }}
     />
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { Mail, MapPin, Clock, Send } from "lucide-react";
 import { trackContactFormSubmit } from "../utils/metaPixel";
 import { trackFormSubmission } from "../utils/googleAnalytics";
+import GoogleMap from "./GoogleMap";
 
 const Contact = () => {
     return (
@@ -111,10 +112,12 @@ const Contact = () => {
                     <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col h-auto md:min-h-[600px] lg:min-h-[700px]">
                         <div className="flex-grow">
                             <div className="w-full bg-gray-100 rounded-lg mb-6 aspect-[4/3] sm:aspect-video">
-                                {/* Placeholder for map */}
-                                <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center">
-                                    <MapPin className="w-12 h-12 text-gray-400" />
-                                </div>
+                                {/* Google Maps Embed */}
+                                <GoogleMap 
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.059707156338!2d106.8208973!3d-6.2297466!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14c27f17ea9%3A0x1234567890abcdef!2sTreasury%20Tower!5e0!3m2!1sen!2sid!4v1635000000000!5m2!1sen!2sid"
+                                    title="PT. KOLEGA BISNIS INDONESIA - Treasury Tower Location"
+                                    className="shadow-sm"
+                                />
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">
                                 Our Location

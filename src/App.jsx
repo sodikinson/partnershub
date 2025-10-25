@@ -1,30 +1,26 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
-import { X } from "lucide-react";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+
+// Components
 import Navbar from "./components/Navbar";
-import SEO from "./components/SEO";
-import Hero from "./components/Hero";
+import Home from "./components/Home";
 import About from "./components/About";
-import Services from "./components/Services";
+import OurServices from "./components/OurServices";
 import Portfolio from "./components/Portfolio";
 import Team from "./components/Team";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Testimonials from "./components/Testimonials";
-import Stats from "./components/Stats";
-// import Blog from "./components/Blog";
-import Customer from "./components/Customer";
-import OurServices from "./components/OurService";
-import WhatsAppButton from "./components/WhatsAppButton";
-import ServicePage from "./components/ServicePage";
-import "./styles/animations.css";
-import LegalService from "./components/LegalService";
 import Event from "./components/Event";
 import Survey from "./components/Survey";
-import { trackPageView, trackSurveyStart } from "./utils/metaPixel";
-import { trackSurveyInteraction } from "./utils/googleAnalytics";
-import { generateHomepageSchema } from './utils/structuredData';
+import ServicePage from "./components/ServicePage";
+import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
+import SEO from "./components/SEO";
+
+// Utils
+import { trackPageView } from "./utils/metaPixel";
+import { trackPageView as trackGAPageView } from "./utils/googleAnalytics";
+import { generateHomepageSchema } from "./utils/structuredData";
 
 const App = () => {
     return (
