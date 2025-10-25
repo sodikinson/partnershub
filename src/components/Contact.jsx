@@ -123,7 +123,7 @@ const Contact = () => {
                                 Our Location
                             </h3>
                             <p className="text-gray-600">
-                                PT.KOLEGA BISNIS INDONESIA <br />
+                                PT.KOLEGA BISNIS INDONESIA // Partners Hub Indonesia<br />
                                 Treasury Tower LT 16 Unit I, District 8 SCBD Lot
                                 28, <br />
                                 Jl. Jend. Sudirman Kav 52-53, Senayan, Kebayoran

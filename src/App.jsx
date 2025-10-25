@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation, Link } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { X } from "lucide-react";
 
 // Components
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
 import About from "./components/About";
-import OurServices from "./components/OurServices";
+import OurServices from "./components/OurService";
 import Portfolio from "./components/Portfolio";
 import Team from "./components/Team";
 import Contact from "./components/Contact";
@@ -16,10 +16,15 @@ import ServicePage from "./components/ServicePage";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import SEO from "./components/SEO";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import LegalService from "./components/LegalService";
+import Stats from "./components/Stats";
+import Customer from "./components/Customer";
 
 // Utils
-import { trackPageView } from "./utils/metaPixel";
-import { trackPageView as trackGAPageView } from "./utils/googleAnalytics";
+import { trackPageView, trackSurveyStart } from "./utils/metaPixel";
+import { trackPageView as trackGAPageView, trackSurveyInteraction } from "./utils/googleAnalytics";
 import { generateHomepageSchema } from "./utils/structuredData";
 
 const App = () => {
@@ -59,7 +64,7 @@ const AppContent = () => {
             />
             <Navbar />
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/ourservices" element={<OurServices />} />
                 <Route path="/portfolio" element={<Portfolio />} />
@@ -78,7 +83,7 @@ const AppContent = () => {
     );
 };
 
-const Home = () => {
+const HomePage = () => {
     const [showBanner, setShowBanner] = useState(true);
     return (
         <>
