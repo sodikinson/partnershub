@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Send, Mail, Phone, Building2, User } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { trackSurveyComplete } from "../utils/metaPixel";
 import { trackSurveyInteraction } from "../utils/googleAnalytics";
 import SEO from "./SEO";
 import { generateSurveySchema } from "../utils/structuredData";
 
 const Survey = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         // 1. Name
         name: "",
@@ -105,7 +107,6 @@ const Survey = () => {
             }
 
             setStatus({ loading: false, success: true, error: null });
-            setShowSuccessModal(true);
             
             // Track survey completion with Meta Pixel
             trackSurveyComplete({
@@ -123,6 +124,7 @@ const Survey = () => {
                 interest: formData.interest
             });
             
+            // Clear form data
             setFormData({
                 name: "",
                 businessName: "",
@@ -138,6 +140,18 @@ const Survey = () => {
                 notes: "",
                 company: "",
                 phone: "",
+            });
+
+            // Redirect to success page with form data (optional, for reference)
+            navigate('/success', {
+                state: {
+                    formData: {
+                        industry: formData.industry,
+                        legalEntity: formData.legalEntity,
+                        focus: formData.focus,
+                        interest: formData.interest
+                    }
+                }
             });
         } catch (err) {
             setStatus({ loading: false, success: false, error: err.message || "Unknown error" });

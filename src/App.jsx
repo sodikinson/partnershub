@@ -13,6 +13,8 @@ import Contact from "./components/Contact";
 import Event from "./components/Event";
 import Survey from "./components/Survey";
 import ServicePage from "./components/ServicePage";
+import Success from "./components/Success";
+import Error404 from "./components/Error404";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import SEO from "./components/SEO";
@@ -65,10 +67,13 @@ const AppContent = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/event" element={<Event />} />
                 <Route path="/survey" element={<Survey />} />
+                <Route path="/success" element={<Success />} />
                 <Route
                     path="/service/:slug"
                     element={<ServicePage />}
                 />
+                {/* 404 Catch-all route - must be last */}
+                <Route path="*" element={<Error404 />} />
             </Routes>
             <WhatsAppButton />
             <Footer />

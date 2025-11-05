@@ -110,3 +110,33 @@ export const trackServiceView = (serviceName) => {
     service_name: serviceName
   });
 };
+
+/**
+ * Track Google Ads conversion
+ * This is used for conversion tracking in Google Ads
+ * @param {string} conversionLabel - The conversion label from Google Ads
+ * @param {number} conversionValue - Optional conversion value
+ * @param {string} currency - Currency code (default: 'IDR')
+ */
+export const trackGoogleAdsConversion = (conversionLabel, conversionValue = null, currency = 'IDR') => {
+  if (!isGtagAvailable()) {
+    console.warn('Google Analytics (gtag) is not available');
+    return;
+  }
+
+  try {
+    const conversionParams = {
+      send_to: conversionLabel,
+    };
+
+    if (conversionValue !== null) {
+      conversionParams.value = conversionValue;
+      conversionParams.currency = currency;
+    }
+
+    window.gtag('event', 'conversion', conversionParams);
+    console.log('Google Ads conversion tracked:', conversionLabel, conversionParams);
+  } catch (error) {
+    console.error('Error tracking Google Ads conversion:', error);
+  }
+};
