@@ -1,9 +1,19 @@
 import React from "react";
 import { Send, Mail, Phone, Building2 } from "lucide-react";
+import SEO from "./SEO";
+import { generateEventSchema } from "../utils/structuredData";
 
 const Event = () => {
     return (
-        <section id="#event" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <>
+            <SEO
+                title="Events - Partners Hub Indonesia"
+                description="PHI x TOMAZZ EVENT: 'Becoming Investment-Ready Business'. Register your interest for our event and we'll follow up with details. Join us for business seminars and networking opportunities in Indonesia."
+                keywords="PHI event, TOMAZZ event, business seminar indonesia, investment-ready business, business networking jakarta, partners hub events"
+                image="/images/thumbnailphi.png"
+                structuredData={generateEventSchema()}
+            />
+            <section id="#event" className="py-24 bg-gradient-to-b from-gray-50 to-white">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-12">
@@ -110,6 +120,7 @@ const Event = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

@@ -2,6 +2,8 @@ import React from "react";
 import { Check, ArrowUpRight } from "lucide-react";
 import about from "../assets/About.jpg"; // Assuming you have an image in the assets folder
 import LazyImage from "./LazyImage";
+import SEO from "./SEO";
+import { generateAboutPageSchema } from "../utils/structuredData";
 
 const About = () => {
     const achievements = [
@@ -31,10 +33,18 @@ const About = () => {
     ];
 
     return (
-        <section
-            id="about"
-            className="py-24 bg-gradient-to-b from-gray-50 to-white"
-        >
+        <>
+            <SEO
+                title="About Us - Partners Hub Indonesia"
+                description="Learn about Partners Hub Indonesia (PT. KOLEGA BISNIS INDONESIA), a trusted business consulting firm with 8+ years of experience. We provide comprehensive solutions for business permits, legal services, tax & accounting, and business advisory in Indonesia."
+                keywords="about partners hub indonesia, PT. KOLEGA BISNIS INDONESIA, business consulting indonesia, company history, mission vision, business solutions provider jakarta"
+                image="/images/About.jpg"
+                structuredData={generateAboutPageSchema()}
+            />
+            <section
+                id="about"
+                className="py-24 bg-gradient-to-b from-gray-50 to-white"
+            >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-20">
@@ -145,6 +155,7 @@ const About = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

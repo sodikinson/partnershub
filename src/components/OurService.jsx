@@ -9,6 +9,8 @@ import {
     ChartSpline,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "./SEO";
+import { generateOurServicesSchema } from "../utils/structuredData";
 
 const OurServices = () => {
     const services = [
@@ -85,7 +87,15 @@ const OurServices = () => {
     };
 
     return (
-        <section className="py-24 bg-gray-50">
+        <>
+            <SEO
+                title="Our Services - Partners Hub Indonesia"
+                description="Comprehensive business services in Indonesia: Business Permit & Legal Services, Tax & Accounting, Business Advisory & Strategy, HR Services, Mergers & Acquisitions, and Feasibility Studies. Expert solutions for your business needs."
+                keywords="business services indonesia, business permit indonesia, legal services jakarta, tax accounting services, business advisory indonesia, HR services, M&A indonesia, feasibility study"
+                image="/images/thumbnailphi.png"
+                structuredData={generateOurServicesSchema()}
+            />
+            <section className="py-24 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-20">
@@ -126,6 +136,7 @@ const OurServices = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

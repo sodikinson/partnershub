@@ -11,6 +11,8 @@ import {
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import SEO from "./SEO";
+import { generateServicePageSchema, generateOurServicesSchema } from "../utils/structuredData";
 
 const services = [
     {
@@ -109,13 +111,50 @@ const getGradient = (color) => {
 
 const ServicePage = () => {
     const { pathname } = useLocation();
+    const serviceSlug = pathname.split('/service/')[1];
+    
+    // Find the service by slug
+    const currentService = services.find(s => s.slug === serviceSlug);
+    
+    // Get description for SEO
+    const getServiceDescription = (service) => {
+        if (!service) return "Our Services - Partners Hub Indonesia";
+        if (Array.isArray(service.description)) {
+            return service.description.map(s => s.section).join(', ') + '. ' + 
+                   service.description.map(s => s.items.join(', ')).join(' ');
+        }
+        return service.description;
+    };
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
 
+    // If specific service page, show service-specific SEO, otherwise show general services page
+    const serviceTitle = currentService 
+        ? `${currentService.title} - Partners Hub Indonesia`
+        : "Our Services - Partners Hub Indonesia";
+    
+    const serviceDescription = currentService
+        ? `${currentService.title}: ${getServiceDescription(currentService)}. Expert business solutions in Indonesia.`
+        : "We provide innovative solutions for your business needs including Business Permit, Legal Service, Tax and Accounting, Business Advisory and Strategy, HR Services, Merger and Acquisition, and Feasibility Study.";
+    
+    const serviceKeywords = currentService
+        ? `${currentService.title.toLowerCase()}, business services indonesia, ${currentService.slug}, partners hub indonesia`
+        : "business services indonesia, business permit indonesia, legal services jakarta, tax accounting services, business advisory indonesia";
+
     return (
         <>
+            <SEO
+                title={serviceTitle}
+                description={serviceDescription}
+                keywords={serviceKeywords}
+                image="/images/thumbnailphi.png"
+                structuredData={currentService 
+                    ? generateServicePageSchema(currentService.title, getServiceDescription(currentService), currentService.slug)
+                    : generateOurServicesSchema()
+                }
+            />
             {/* Hero Section */}
             <section className="relative bg-gradient-to-r from-blue-50 to-purple-50 py-20 mb-12">
                 <div className="max-w-5xl mx-auto px-4 text-center">

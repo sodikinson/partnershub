@@ -59,16 +59,20 @@ const LegalService = () => {
                     </p> */}
                 </div>
 
-                {/* Main Content */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-                    {/* Left Column - Image */}
-                    <div className="relative">
-                        <div className="absolute -top-4 -left-4 w-72 h-72 bg-blue-100 rounded-lg -z-10"></div>
-                        <img
-                            src="/images/Legal.jpg"
-                            alt="About us"
-                            className="rounded-lg shadow-2xl w-full object-cover h-[500px]"
-                        />
+                {/* Main Content - Centered Image */}
+                <div className="flex justify-center items-center mb-20">
+                    <div className="relative w-full max-w-4xl">
+                        {/* Decorative background element */}
+                        <div className="absolute -top-4 -left-4 w-48 h-48 md:w-72 md:h-72 bg-blue-100 rounded-lg -z-10 opacity-50"></div>
+                        
+                        {/* Responsive Image Container */}
+                        <div className="flex justify-center">
+                            <img
+                                src="/images/Legal.jpg"
+                                alt="Legal Services"
+                                className="rounded-lg shadow-2xl w-full max-w-full object-cover h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] xl:h-[550px] mx-auto"
+                            />
+                        </div>
                         {/* Achievement Stats */}
                         {/* <div className="grid grid-cols-2 gap-4 absolute -right-8 -bottom-8 bg-white p-6 rounded-lg shadow-xl max-w-sm">
                             {achievements.map((achievement, index) => (
@@ -78,69 +82,6 @@ const LegalService = () => {
                                     </div>
                                     <div className="text-sm text-gray-600">
                                         {achievement.label}
-                                    </div>
-                                </div>
-                            ))}
-                        </div> */}
-                    </div>
-
-                    {/* Right Column - Content */}
-                    <div className="space-y-8">
-                        {/* <div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                                Introductory Note
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed mb-6">
-                                Partnershub Indonesia is a trusted business
-                                consulting firm specializing in business
-                                permits, legal services, tax and accounting,
-                                advisory, HR management, mergers & acquisitions,
-                                and feasibility studies. We provide
-                                comprehensive solutions to help businesses
-                                navigate regulatory requirements, optimize
-                                operations, and achieve sustainable growth.
-                            </p>
-                        </div> */}
-
-                        {/* Mission & Vision Cards */}
-                        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="p-6 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
-                                <h4 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
-                                    Mission
-                                    <ArrowUpRight className="w-5 h-5 ml-2 text-blue-600" />
-                                </h4>
-                                <p className="text-gray-600">
-                                    Empowering people and crafting exceptional
-                                    strategies for outstanding service.
-                                </p>
-                            </div>
-                            <div className="p-6 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors">
-                                <h4 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
-                                    Vision
-                                    <ArrowUpRight className="w-5 h-5 ml-2 text-purple-600" />
-                                </h4>
-                                <p className="text-gray-600">
-                                    To be the premier partner in fostering
-                                    unparalleled business growth for our
-                                    clients.
-                                </p>
-                            </div>
-                        </div> */}
-
-                        {/* Company Values */}
-                        {/* <div className="space-y-4">
-                            {values.map((value, index) => (
-                                <div key={index} className="flex items-start">
-                                    <div className="flex-shrink-0">
-                                        <Check className="w-5 h-5 text-blue-600" />
-                                    </div>
-                                    <div className="ml-4">
-                                        <h5 className="text-lg font-semibold text-gray-900">
-                                            {value.title}
-                                        </h5>
-                                        <p className="text-gray-600">
-                                            {value.description}
-                                        </p>
                                     </div>
                                 </div>
                             ))}

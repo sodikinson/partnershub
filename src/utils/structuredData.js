@@ -251,3 +251,113 @@ export const generateHomepageSchema = () => ({
     }
   ]
 });
+
+// Schema for Our Services page
+export const generateOurServicesSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Our Services - Partners Hub Indonesia",
+  "description": "Comprehensive business services including Business Permit & Legal Services, Tax & Accounting, Business Advisory, HR Services, M&A, and Feasibility Studies in Indonesia",
+  "url": "https://partnershub.co/ourservices",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "Service",
+        "name": "Business Permit & Legal Services",
+        "description": "Business registration & licensing, Compliance with local regulations, Legal documentation & corporate governance"
+      },
+      {
+        "@type": "Service",
+        "name": "Tax & Accounting",
+        "description": "Tax Planning, tax compliance, reporting, Tax Lawyer, Financial Statement, Auditing"
+      },
+      {
+        "@type": "Service",
+        "name": "Business Advisory & Strategy",
+        "description": "Business Process Optimization, Market entry Strategy, Corporate Restructuring"
+      },
+      {
+        "@type": "Service",
+        "name": "HR Services",
+        "description": "Policies, Compliance, Recruitment, Talent Acquisition, Payroll, and Employee benefits"
+      },
+      {
+        "@type": "Service",
+        "name": "Mergers & Acquisitions",
+        "description": "Due diligence, valuation, Negotiation, Deal Structuring, Post-merger integration"
+      },
+      {
+        "@type": "Service",
+        "name": "Feasibility Study",
+        "description": "Market analysis, Research, Final projections, Risk assessment"
+      }
+    ]
+  }
+});
+
+// Schema for Team/Clients page
+export const generateTeamSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Our Clients - Partners Hub Indonesia",
+  "description": "Meet our diverse portfolio of clients across various industries including Retail, Education, Food & Beverage, Manufacturing, Mining, and more",
+  "url": "https://partnershub.co/team"
+});
+
+// Schema for Portfolio page
+export const generatePortfolioSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Vision for The Future - Partners Hub Indonesia",
+  "description": "Our company is committed to becoming a one-stop service provider, offering our clients everything they need in one convenient location",
+  "url": "https://partnershub.co/portfolio",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Partners Hub Indonesia",
+    "description": "Committed to evolving into a super company by expanding offerings to include a wide range of products and services, investing in cutting-edge technology, and recruiting the best talent to deliver the highest levels of quality and efficiency."
+  }
+});
+
+// Schema for Event page
+export const generateEventSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Events - Partners Hub Indonesia",
+  "description": "Stay updated with our latest events, seminars, and business networking opportunities in Indonesia",
+  "url": "https://partnershub.co/event"
+});
+
+// Schema for Survey page
+export const generateSurveySchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Survey - Partners Hub Indonesia",
+  "description": "Help us improve our services by sharing your feedback and experience",
+  "url": "https://partnershub.co/survey"
+});
+
+// Schema for individual service pages
+export const generateServicePageSchema = (serviceName, serviceDescription, serviceSlug) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": serviceName,
+  "description": serviceDescription,
+  "url": `https://partnershub.co/service/${serviceSlug}`,
+  "provider": {
+    "@type": "Organization",
+    "name": "Partners Hub Indonesia",
+    "url": "https://partnershub.co",
+    "logo": "https://partnershub.co/images/logo.png"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia"
+  },
+  "serviceType": serviceName,
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceRange": "Contact for pricing"
+  }
+});

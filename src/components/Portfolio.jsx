@@ -6,6 +6,8 @@ import {
     Building2,
     ArrowRight,
 } from "lucide-react";
+import SEO from "./SEO";
+import { generatePortfolioSchema } from "../utils/structuredData";
 
 const Portfolio = () => {
     // const [activeCategory, setActiveCategory] = useState("All");
@@ -87,7 +89,15 @@ const Portfolio = () => {
     //         : projects.filter((project) => project.category === activeCategory);
 
     return (
-        <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <>
+            <SEO
+                title="Vision for The Future - Partners Hub Indonesia"
+                description="Our company is committed to becoming a one-stop service provider, offering clients everything they need in one convenient location. We're evolving into a super company by expanding offerings and investing in cutting-edge technology."
+                keywords="partners hub vision, future business indonesia, one-stop service provider, super company indonesia, business innovation jakarta"
+                image="/images/thumbnailphi.png"
+                structuredData={generatePortfolioSchema()}
+            />
+            <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-20">
@@ -220,6 +230,7 @@ const Portfolio = () => {
                 </div> */}
             </div>
         </section>
+        </>
     );
 };
 

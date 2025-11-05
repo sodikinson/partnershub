@@ -3,13 +3,23 @@ import { Mail, MapPin, Clock, Send } from "lucide-react";
 import { trackContactFormSubmit } from "../utils/metaPixel";
 import { trackFormSubmission } from "../utils/googleAnalytics";
 import GoogleMap from "./GoogleMap";
+import SEO from "./SEO";
+import { generateContactPageSchema } from "../utils/structuredData";
 
 const Contact = () => {
     return (
-        <section
-            id="#contact"
-            className="py-24 bg-gradient-to-b from-gray-50 to-white"
-        >
+        <>
+            <SEO
+                title="Contact Us - Partners Hub Indonesia"
+                description="Get in touch with Partners Hub Indonesia. Located at Treasury Tower LT 16 Unit I, District 8 SCBD, Jakarta. Contact us via phone, email, or WhatsApp for business solutions in Indonesia."
+                keywords="contact partners hub indonesia, business consulting jakarta, treasury tower scbd, contact business advisor indonesia, partners hub phone number"
+                image="/images/thumbnailphi.png"
+                structuredData={generateContactPageSchema()}
+            />
+            <section
+                id="#contact"
+                className="py-24 bg-gradient-to-b from-gray-50 to-white"
+            >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-20">
@@ -172,6 +182,7 @@ const Contact = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

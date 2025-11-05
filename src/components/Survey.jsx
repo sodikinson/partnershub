@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Send, Mail, Phone, Building2, User } from "lucide-react";
 import { trackSurveyComplete } from "../utils/metaPixel";
 import { trackSurveyInteraction } from "../utils/googleAnalytics";
+import SEO from "./SEO";
+import { generateSurveySchema } from "../utils/structuredData";
 
 const Survey = () => {
     const [formData, setFormData] = useState({
@@ -144,7 +146,15 @@ const Survey = () => {
     };
 
     return (
-        <section id="#survey" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <>
+            <SEO
+                title="Survey - Partners Hub Indonesia"
+                description="Help us improve our services by sharing your feedback and experience. Complete our survey to help Partners Hub Indonesia better serve businesses in Indonesia."
+                keywords="partners hub survey, business survey indonesia, feedback form, business consultation survey"
+                image="/images/thumbnailphi.png"
+                structuredData={generateSurveySchema()}
+            />
+            <section id="#survey" className="py-24 bg-gradient-to-b from-gray-50 to-white">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Responsive banner between Navbar and form title */}
                 <div className="mb-10">
@@ -496,6 +506,7 @@ const Survey = () => {
                 </div>
             )}
         </section>
+        </>
     );
 };
 

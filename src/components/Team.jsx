@@ -7,6 +7,8 @@ import {
     GlobeIcon,
 } from "lucide-react";
 import LazyImage from "./LazyImage";
+import SEO from "./SEO";
+import { generateTeamSchema } from "../utils/structuredData";
 
 const Team = () => {
     const team = [
@@ -143,7 +145,15 @@ const Team = () => {
     };
 
     return (
-        <section className="py-24 bg-gray-50">
+        <>
+            <SEO
+                title="Our Clients - Partners Hub Indonesia"
+                description="Meet our diverse portfolio of clients across various industries including Retail, Education, Food & Beverage, Manufacturing, Mining, Caroseri, and Export/Import. See how we help businesses succeed in Indonesia."
+                keywords="partners hub clients, business clients indonesia, portfolio indonesia, retail clients, manufacturing clients, mining clients indonesia"
+                image="/images/thumbnailphi.png"
+                structuredData={generateTeamSchema()}
+            />
+            <section className="py-24 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-20">
@@ -263,6 +273,7 @@ const Team = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

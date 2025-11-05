@@ -55,13 +55,6 @@ const AppContent = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            <SEO
-                title="Partners Hub Indonesia - Professional Business Solutions"
-                description="Your trusted partner for business permits, legal services, tax & accounting, business advisory, HR management, M&A, and feasibility studies in Indonesia. Expert solutions for market entry and business growth."
-                keywords="business permits Indonesia, legal services Jakarta, tax accounting Indonesia, business advisory, HR management, M&A Indonesia, feasibility studies, company incorporation Indonesia, business licensing, regulatory compliance"
-                image="/images/thumbnailphi.png"
-                structuredData={generateHomepageSchema()}
-            />
             <Navbar />
             <Routes>
                 <Route path="/" element={<HomePage />} />
@@ -87,6 +80,13 @@ const HomePage = () => {
     const [showBanner, setShowBanner] = useState(true);
     return (
         <>
+            <SEO
+                title="Partners Hub Indonesia - Professional Business Solutions"
+                description="Your trusted partner for business permits, legal services, tax & accounting, business advisory, HR management, M&A, and feasibility studies in Indonesia. Expert solutions for market entry and business growth."
+                keywords="business permits Indonesia, legal services Jakarta, tax accounting Indonesia, business advisory, HR management, M&A Indonesia, feasibility studies, company incorporation Indonesia, business licensing, regulatory compliance"
+                image="/images/thumbnailphi.png"
+                structuredData={generateHomepageSchema()}
+            />
             {showBanner && (
                 <div
                     className="fixed inset-0 z-50 bg-black/40 p-4 flex items-end justify-start"
