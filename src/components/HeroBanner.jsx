@@ -60,39 +60,37 @@ const HeroBanner = () => {
 
     return (
         <>
-            <section className="relative w-full mt-20 sm:mt-24 md:mt-28">
+            <section className="relative w-full pt-28 sm:pt-32 md:pt-36 lg:pt-40">
                 {/* Full-width clickable banner - always visible */}
                 <button
                     onClick={handleBannerClick}
                     className="block w-full cursor-pointer group relative"
                     aria-label="Register for Event - Click to participate"
                 >
-                    {/* Background Image Container - Responsive and fully visible */}
-                    <div className="relative w-full overflow-hidden bg-gray-100 sm:bg-transparent">
+                    {/* Background Image Container - Full image visible without cropping */}
+                    <div className="relative w-full bg-gray-100 sm:bg-transparent flex items-center justify-center">
                         <img
                             src="/images/hero.jpeg"
                             alt="Event Registration - Partners Hub Indonesia"
                             className="w-full transition-transform duration-700 ease-out
-                                h-[200px]
+                                h-auto
+                                max-h-[200px]
                                 object-contain
-                                object-center
-                                xs:h-[220px]
-                                sm:h-[280px]
-                                sm:object-cover
-                                md:h-[350px]
-                                lg:h-[500px]
-                                xl:h-[600px]
-                                2xl:h-[700px]
+                                xs:max-h-[220px]
+                                sm:max-h-[280px]
+                                md:max-h-[350px]
+                                lg:max-h-[500px]
+                                xl:max-h-[600px]
+                                2xl:max-h-[700px]
                                 group-hover:scale-105"
                             loading="eager"
                             style={{
                                 width: '100%',
                                 display: 'block',
+                                objectFit: 'contain',
+                                objectPosition: 'top center',
                             }}
                         />
-                        
-                        {/* Dark overlay for better text readability */}
-                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-300 z-10"></div>
                     </div>
                 </button>
             </section>
@@ -122,4 +120,3 @@ const HeroBanner = () => {
 };
 
 export default HeroBanner;
-
