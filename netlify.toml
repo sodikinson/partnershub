@@ -17,6 +17,15 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Headers for XML files (BingSiteAuth.xml, sitemap.xml)
+[[headers]]
+  for = "/*.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    X-Content-Type-Options = "nosniff"
+
+# Redirect all routes to index.html (SPA routing)
+# XML files will be served directly if they exist in public folder
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -18,6 +18,7 @@ import Error404 from "./components/Error404";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import SEO from "./components/SEO";
+import HeroBanner from "./components/HeroBanner";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import LegalService from "./components/LegalService";
@@ -130,6 +131,7 @@ const HomePage = () => {
                     </div>
                 </div>
             )}
+            <HeroBanner />
             <Hero />
             <About />
             <OurServices />
