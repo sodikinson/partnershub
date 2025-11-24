@@ -157,12 +157,12 @@ const Team = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         Our{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Clients
                         </span>
-                    </h2>
+                    </h1>
                     <p className="max-w-2xl mx-auto text-lg text-gray-600">
                         Our team of experts brings together decades of
                         experience to deliver exceptional results
@@ -183,7 +183,7 @@ const Team = () => {
                             <div className="relative h-80 overflow-hidden">
                                 <LazyImage
                                     src={member.image}
-                                    alt={member.name}
+                                    alt={`${member.name} - ${member.role} at Partners Hub Indonesia`}
                                     width={300}
                                     height={320}
                                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"

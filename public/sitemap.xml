@@ -7,7 +7,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://partnershub.co/</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
   <!-- About Page -->
   <url>
     <loc>https://partnershub.co/about</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,7 +23,7 @@
   <!-- Our Services Page -->
   <url>
     <loc>https://partnershub.co/ourservices</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -31,49 +31,49 @@
   <!-- Service Pages -->
   <url>
     <loc>https://partnershub.co/service/business-permit-legal-services</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://partnershub.co/service/tax-accounting</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://partnershub.co/service/business-advisory-strategy</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://partnershub.co/service/hr-services</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://partnershub.co/service/mergers-acquisitions</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://partnershub.co/service/feasibility-study</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://partnershub.co/service/adaptability</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -81,7 +81,7 @@
   <!-- Portfolio Page -->
   <url>
     <loc>https://partnershub.co/portfolio</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -89,7 +89,7 @@
   <!-- Team Page -->
   <url>
     <loc>https://partnershub.co/team</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -97,7 +97,7 @@
   <!-- Contact Page -->
   <url>
     <loc>https://partnershub.co/contact</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -105,7 +105,7 @@
   <!-- Event Page -->
   <url>
     <loc>https://partnershub.co/event</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -113,7 +113,7 @@
   <!-- Survey Page -->
   <url>
     <loc>https://partnershub.co/survey</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -121,7 +121,7 @@
   <!-- Success Page -->
   <url>
     <loc>https://partnershub.co/success</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

@@ -101,12 +101,12 @@ const Portfolio = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         Vision for The{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-700">
                             Future
                         </span>
-                    </h2>
+                    </h1>
                     <p className="max-w-2xl mx-auto text-lg text-gray-600">
                         Our company is committed to becoming a one-stop service
                         provider, offering our clients everything they need in
@@ -160,8 +160,11 @@ const Portfolio = () => {
                                 </div>
                                 <img
                                     src={project.image}
-                                    alt={project.title}
+                                    alt={`${project.title} - Partners Hub Indonesia Portfolio Project`}
                                     className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                                    width="400"
+                                    height="256"
+                                    loading="lazy"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="absolute bottom-0 left-0 right-0 p-6">

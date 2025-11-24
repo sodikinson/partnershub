@@ -73,7 +73,18 @@ const SurveyModal = ({ isOpen, onClose, onModalClose }) => {
             });
 
             if (!res.ok) {
-                throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+                const text = await res.text().catch(() => "");
+                throw new Error(`Submission failed: HTTP ${res.status}${text ? ` - ${text.substring(0, 200)}` : ""}`);
+            }
+
+            // Try to read JSON response only when server indicates JSON
+            let payloadResp = null;
+            const ct = res.headers.get("content-type") || "";
+            if (ct.includes("application/json")) {
+                payloadResp = await res.json().catch(() => null);
+            }
+            if (payloadResp && payloadResp.ok === false) {
+                throw new Error(payloadResp.error || "Server reported failure");
             }
 
             trackSurveyComplete();

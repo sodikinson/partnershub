@@ -69,8 +69,11 @@ const LegalService = () => {
                         <div className="flex justify-center">
                             <img
                                 src="/images/Legal.jpg"
-                                alt="Legal Services"
+                                alt="Partners Hub Indonesia Legal Services - Business permit, corporate law, and regulatory compliance in Jakarta, Indonesia"
                                 className="rounded-lg shadow-2xl w-full max-w-full object-cover h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] xl:h-[550px] mx-auto"
+                                width="800"
+                                height="550"
+                                loading="lazy"
                             />
                         </div>
                         {/* Achievement Stats */}

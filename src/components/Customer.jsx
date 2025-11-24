@@ -66,8 +66,11 @@ const Customer = () => {
                         <div className="absolute -top-4 -left-4 w-72 h-72 bg-blue-100 rounded-lg -z-10"></div>
                         <img
                             src="/images/Customer.jpg"
-                            alt="About us"
+                            alt="Partners Hub Indonesia clients and customers across various industries in Indonesia"
                             className="rounded-lg shadow-2xl w-full object-cover h-[500px]"
+                            width="600"
+                            height="500"
+                            loading="lazy"
                         />
                         {/* Achievement Stats */}
                         {/* <div className="grid grid-cols-2 gap-4 absolute -right-8 -bottom-8 bg-white p-6 rounded-lg shadow-xl max-w-sm">

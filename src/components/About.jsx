@@ -48,12 +48,12 @@ const About = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         Partners Hub Indonesia{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Company Overview
                         </span>
-                    </h2>
+                    </h1>
                     <p className="max-w-2xl mx-auto text-lg text-gray-600">
                         Empowering businesses to reach their full potential with
                         personalized, professional support. Our mission is to
@@ -69,7 +69,7 @@ const About = () => {
                         <div className="absolute -top-4 -left-4 w-72 h-72 bg-blue-100 rounded-lg -z-10"></div>
                         <LazyImage
                             src="/images/About.jpg"
-                            alt="About us"
+                            alt="Partners Hub Indonesia team - Professional business consulting firm in Jakarta, Indonesia"
                             width={600}
                             height={400}
                             sizes="(max-width: 768px) 100vw, 50vw"

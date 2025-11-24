@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import SEO from "./SEO";
-import { generateServicePageSchema, generateOurServicesSchema } from "../utils/structuredData";
+import { generateServicePageSchema, generateOurServicesSchema, generateBreadcrumbSchema } from "../utils/structuredData";
 
 const services = [
     {
@@ -143,6 +143,25 @@ const ServicePage = () => {
         ? `${currentService.title.toLowerCase()}, business services indonesia, ${currentService.slug}, partners hub indonesia`
         : "business services indonesia, business permit indonesia, legal services jakarta, tax accounting services, business advisory indonesia";
 
+    // Generate breadcrumbs for service pages
+    const breadcrumbs = currentService ? [
+        { name: "Home", url: "https://partnershub.co/" },
+        { name: "Our Services", url: "https://partnershub.co/ourservices" },
+        { name: currentService.title, url: `https://partnershub.co/service/${currentService.slug}` }
+    ] : [
+        { name: "Home", url: "https://partnershub.co/" },
+        { name: "Our Services", url: "https://partnershub.co/ourservices" }
+    ];
+
+    // Combine structured data
+    const combinedStructuredData = currentService ? {
+        "@context": "https://schema.org",
+        "@graph": [
+            generateServicePageSchema(currentService.title, getServiceDescription(currentService), currentService.slug),
+            generateBreadcrumbSchema(breadcrumbs)
+        ]
+    } : generateOurServicesSchema();
+
     return (
         <>
             <SEO
@@ -150,10 +169,7 @@ const ServicePage = () => {
                 description={serviceDescription}
                 keywords={serviceKeywords}
                 image="/images/thumbnailphi.png"
-                structuredData={currentService 
-                    ? generateServicePageSchema(currentService.title, getServiceDescription(currentService), currentService.slug)
-                    : generateOurServicesSchema()
-                }
+                structuredData={combinedStructuredData}
             />
             {/* Hero Section */}
             <section className="relative bg-gradient-to-r from-blue-50 to-purple-50 py-20 mb-12">

@@ -11,7 +11,7 @@ import Portfolio from "./components/Portfolio";
 import Team from "./components/Team";
 import Contact from "./components/Contact";
 import Event from "./components/Event";
-import Survey from "./components/Survey";
+// import Survey from "./components/Survey";
 import ServicePage from "./components/ServicePage";
 import Success from "./components/Success";
 import Error404 from "./components/Error404";
@@ -67,7 +67,7 @@ const AppContent = () => {
                 <Route path="/team" element={<Team />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/event" element={<Event />} />
-                <Route path="/survey" element={<Survey />} />
+                {/* <Route path="/survey" element={<Survey />} /> */}
                 <Route path="/success" element={<Success />} />
                 <Route
                     path="/service/:slug"
@@ -83,13 +83,13 @@ const AppContent = () => {
 };
 
 const HomePage = () => {
-    const [showBanner, setShowBanner] = useState(true);
+    const [showBanner, setShowBanner] = useState(false); // Hidden for now
     return (
         <>
             <SEO
                 title="Partners Hub Indonesia - Professional Business Solutions"
-                description="Your trusted partner for business permits, legal services, tax & accounting, business advisory, HR management, M&A, and feasibility studies in Indonesia. Expert solutions for market entry and business growth."
-                keywords="business permits Indonesia, legal services Jakarta, tax accounting Indonesia, business advisory, HR management, M&A Indonesia, feasibility studies, company incorporation Indonesia, business licensing, regulatory compliance"
+                description="Partners Hub Indonesia (PT. KOLEGA BISNIS INDONESIA) - One partner for all your business needs: Legal Permits, Tax Advisory, and Accounting. Modernize your workflow with our in-house custom ERP, HRIS, and App development. Jakarta's trusted consultant for Business Permits, Tax, and Accounting. From PT establishment to custom software (ERP/HRIS), we provide end-to-end business support. Contact: +62 878-7379-5212 | info@partnershub.co"
+                keywords="Tax and Accounting, Business Permits, PT Registration, PMA Registration, Monthly Tax Compliance, Custom Web, Apps, ERP, HRIS, Digitalize, business permits Indonesia, legal services Jakarta, tax accounting Indonesia, business advisory, HR management, M&A Indonesia, feasibility studies, company incorporation Indonesia, business licensing, regulatory compliance, custom software development, ERP systems, HRIS systems"
                 image="/images/thumbnailphi.png"
                 structuredData={generateHomepageSchema()}
             />
@@ -131,7 +131,7 @@ const HomePage = () => {
                     </div>
                 </div>
             )}
-            <HeroBanner />
+            {/* <HeroBanner /> */}
             <Hero />
             <About />
             <OurServices />

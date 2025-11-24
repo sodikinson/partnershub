@@ -125,6 +125,22 @@ const Services = () => {
                         );
                     })}
                 </div>
+
+                {/* Portfolio Image Section */}
+                <div className="mt-20">
+                    <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                        {/* Image */}
+                        <div className="relative w-full">
+                            <img
+                                src="/images/portfolio-min.png"
+                                alt="Key Benefits Partnering With Us - Fast & Precise, Scalable Solutions, Cost-Effective, Complimentary Consultation, Free Reports, Daily Updates, Adaptability"
+                                className="w-full h-auto object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                       
+                    </div>
+                </div>
             </div>
         </section>
     );

@@ -9,13 +9,13 @@ export const generateOrganizationSchema = () => ({
   "url": "https://partnershub.co",
   "logo": "https://partnershub.co/images/logo.png",
   "image": "https://partnershub.co/images/thumbnailphi.png",
-  "description": "Professional business solutions provider in Indonesia offering comprehensive services including Business Permit, Legal Services, Tax & Accounting, Business Advisory, HR Management, M&A, and Feasibility Studies.",
+  "description": "One partner for all your business needs: Legal Permits, Tax Advisory, and Accounting. Modernize your workflow with our in-house custom ERP, HRIS, and App development. Jakarta's trusted consultant for Business Permits, Tax, and Accounting. From PT establishment to custom software (ERP/HRIS), we provide end-to-end business support.",
   "foundingDate": "2020",
-  "legalName": "Partners Hub Indonesia",
+  "legalName": "PT. KOLEGA BISNIS INDONESIA",
   "slogan": "Your Trusted Business Partner in Indonesia",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Jl. Sudirman Kav. 52-53",
+    "streetAddress": "Treasury Tower LT 16 Unit I, District 8 SCBD Lot 28, Jl. Jend. Sudirman Kav 52-53",
     "addressLocality": "Jakarta Selatan",
     "addressRegion": "DKI Jakarta",
     "postalCode": "12190",
@@ -29,7 +29,14 @@ export const generateOrganizationSchema = () => ({
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+62-811-1840-070",
+      "telephone": "+62-878-7379-5212",
+      "contactType": "customer service",
+      "availableLanguage": ["Indonesian", "English"],
+      "areaServed": "ID"
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+62-21-50300844",
       "contactType": "customer service",
       "availableLanguage": ["Indonesian", "English"],
       "areaServed": "ID"
@@ -53,14 +60,24 @@ export const generateOrganizationSchema = () => ({
   "knowsAbout": [
     "Business Permits",
     "Legal Services",
+    "Tax and Accounting",
     "Tax Consulting",
     "Accounting Services",
+    "PT Registration",
+    "PMA Registration",
+    "Monthly Tax Compliance",
     "Business Advisory",
     "HR Management",
     "Mergers and Acquisitions",
     "Feasibility Studies",
     "Corporate Law",
-    "Investment Advisory"
+    "Investment Advisory",
+    "Custom Web Development",
+    "Apps Development",
+    "ERP Systems",
+    "HRIS Systems",
+    "Digitalize",
+    "Software Development"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -131,7 +148,7 @@ export const generateWebsiteSchema = () => ({
   "@type": "WebSite",
   "name": "Partners Hub Indonesia",
   "url": "https://partnershub.co",
-  "description": "Professional business solutions provider in Indonesia",
+  "description": "One partner for all your business needs: Legal Permits, Tax Advisory, and Accounting. Modernize your workflow with our in-house custom ERP, HRIS, and App development.",
   "publisher": {
     "@type": "Organization",
     "name": "Partners Hub Indonesia"
@@ -201,13 +218,26 @@ export const generateContactPageSchema = () => ({
   "mainEntity": {
     "@type": "Organization",
     "name": "Partners Hub Indonesia",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+62-811-1840-070",
-      "email": "info@partnershub.co",
-      "contactType": "customer service",
-      "availableLanguage": ["Indonesian", "English"]
-    }
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+62-878-7379-5212",
+        "contactType": "customer service",
+        "availableLanguage": ["Indonesian", "English"]
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+62-21-50300844",
+        "contactType": "customer service",
+        "availableLanguage": ["Indonesian", "English"]
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "info@partnershub.co",
+        "contactType": "customer service",
+        "availableLanguage": ["Indonesian", "English"]
+      }
+    ]
   }
 });
 
@@ -233,7 +263,7 @@ export const generateHomepageSchema = () => ({
     {
       "@type": "WebPage",
       "name": "Partners Hub Indonesia - Professional Business Solutions",
-      "description": "Your trusted partner for business permits, legal services, tax & accounting, and business advisory in Indonesia",
+      "description": "One partner for all your business needs: Legal Permits, Tax Advisory, and Accounting. Modernize your workflow with our in-house custom ERP, HRIS, and App development. Jakarta's trusted consultant for Business Permits, Tax, and Accounting.",
       "url": "https://partnershub.co",
       "isPartOf": {
         "@type": "WebSite",

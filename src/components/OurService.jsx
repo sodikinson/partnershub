@@ -99,12 +99,12 @@ const OurServices = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         Our{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Services
                         </span>
-                    </h2>
+                    </h1>
                     <p className="max-w-2xl mx-auto text-lg text-gray-600">
                         Partnering With Us
                     </p>

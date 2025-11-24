@@ -10,7 +10,7 @@ const Contact = () => {
     return (
         <>
             <SEO
-                title="Contact Us - Partners Hub Indonesia"
+                title="Contact Us, to Consult your business needs - Partners Hub Indonesia"
                 description="Get in touch with Partners Hub Indonesia. Located at Treasury Tower LT 16 Unit I, District 8 SCBD, Jakarta. Contact us via phone, email, or WhatsApp for business solutions in Indonesia."
                 keywords="contact partners hub indonesia, business consulting jakarta, treasury tower scbd, contact business advisor indonesia, partners hub phone number"
                 image="/images/thumbnailphi.png"
@@ -23,12 +23,12 @@ const Contact = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         Let's Start a{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             Conversation
                         </span>
-                    </h2>
+                    </h1>
                     <p className="max-w-2xl mx-auto text-lg text-gray-600">
                         Have a question or want to work together? We'd love to
                         hear from you. Here's how you can reach us.

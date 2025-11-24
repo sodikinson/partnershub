@@ -52,11 +52,13 @@ export default defineConfig(({ mode }) => {
       allowedHosts: ['diphase-williams-oxymoronically.ngrok-free.dev'],
       // Listen on all interfaces for tunneling
       host: true,
-      // Make HMR work over HTTPS tunnels
-      hmr: {
-        clientPort: 443,
-        protocol: 'wss',
-      },
+      // HMR configuration - only use WSS when using ngrok tunnel
+      // For local development, Vite will use default HTTP/WS
+      // Uncomment below if using ngrok HTTPS tunnel:
+      // hmr: {
+      //   clientPort: 443,
+      //   protocol: 'wss',
+      // },
     },
     // Remove Vite built-in proxy for /survey-proxy to avoid conflicts
     // Our custom middleware above handles POST forwarding and redirects.

@@ -20,9 +20,11 @@ const Hero = () => {
                     />
                     <img
                         src="/hero-desktop.jpg"
-                        alt="Hero background"
+                        alt="Partners Hub Indonesia - Professional business consulting services in Jakarta, Indonesia"
                         className="w-full h-full object-cover opacity-40"
                         loading="eager"
+                        width="1920"
+                        height="1080"
                     />
                 </picture>
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-blue-900/90 backdrop-blur-sm"></div>

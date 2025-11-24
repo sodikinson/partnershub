@@ -1,3 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /success
+Disallow: /survey-proxy
+
+# Sitemap
 Sitemap: https://partnershub.co/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

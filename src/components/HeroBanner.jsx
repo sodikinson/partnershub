@@ -94,7 +94,8 @@ const HeroBanner = () => {
             </section>
 
             {/* Floating "Take Survey" Button - shown when modal is closed */}
-            {isModalClosed && !isModalOpen && (
+            {/* Hidden for now */}
+            {false && isModalClosed && !isModalOpen && (
                 <Link
                     to="/survey"
                     onClick={handleFloatingButtonClick}
